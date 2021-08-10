@@ -1,0 +1,18 @@
+header {
+    background-color: #2A3132;
+    height: 100px;
+}
+
+.page {
+    display: flex;
+
+    .menu {
+        flex: 0 0 200px;
+        background-color: #336B87;
+    }
+
+    .content {
+        flex: 1 1 auto;
+        padding: 20px;
+    }
+}

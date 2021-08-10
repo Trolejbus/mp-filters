@@ -7,7 +7,7 @@
       "projectType": "library",
       "root": "projects/mp-filters-lib",
       "sourceRoot": "projects/mp-filters-lib/src",
-      "prefix": "lib",
+      "prefix": "mp",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
