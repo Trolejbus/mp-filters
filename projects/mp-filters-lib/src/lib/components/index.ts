@@ -1,1 +1,1 @@
-export * from '../filters-container';
+export * from './filters-container';

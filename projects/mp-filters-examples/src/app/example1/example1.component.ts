@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FilterGroupModel } from 'projects/mp-filters-lib/src/lib/models';
 
 @Component({
   selector: 'app-example1',
@@ -7,6 +8,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Example1Component implements OnInit {
 
+  public filters: FilterGroupModel[] = [
+    {
+      name: "name1",
+      title: "Name1",
+    },
+    {
+      name: "name2",
+      title: "Name2",
+    },
+    {
+      name: "name3",
+      title: "Name3",
+    },
+    {
+      name: "name4",
+      title: "Name4",
+    },
+    {
+      name: "name5",
+      title: "Name5",
+    },
+  ];
+  
   constructor() { }
 
   ngOnInit(): void {

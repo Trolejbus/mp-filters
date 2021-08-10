@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { FilterGroupModel } from '../../models';
 
 @Component({
   selector: 'mp-filters-container',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./filters-container.component.scss']
 })
 export class FiltersContainerComponent implements OnInit {
+
+  @Input()
+  public filters: FilterGroupModel[] = [];
 
   constructor() { }
 

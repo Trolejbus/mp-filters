@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid gray;
+    padding: 5px;
+    cursor: pointer;
+
+    h2 {
+        flex: 1 1 auto;
+        margin: 0;
+    }
+
+    .icon {
+        border-top: black solid 8px;
+        border-left: transparent solid 8px;
+        border-right: transparent solid 8px;
+    }
+
+    &:hover .icon {
+        border-top-color: gray;
+    }
+}
