@@ -9,11 +9,19 @@ import { FilterGroupModel } from '../../models';
 export class FilterGroupsComponent implements OnInit {
 
   @Input()
-  public filters: FilterGroupModel[] = [];
+  public filter!: FilterGroupModel;
+  @Input()
+  public level: number = 0;
+
+  public expanded: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  public toggleExpanded(): void {
+    this.expanded = !this.expanded;
   }
 
 }

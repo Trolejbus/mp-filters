@@ -12,6 +12,22 @@ export class Example1Component implements OnInit {
     {
       name: "name1",
       title: "Name1",
+      children: [
+        {
+          name: "name11",
+          title: "Name11",
+          children: [
+            {
+              name: "name111",
+              title: "Name111",
+            }
+          ]
+        },
+        {
+          name: "name12",
+          title: "Name12",
+        },
+      ],
     },
     {
       name: "name2",
