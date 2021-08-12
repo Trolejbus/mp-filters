@@ -31,17 +31,15 @@ $hoverColor: navy;
     }
 
     .expanded-wrapper {
-        height: 0px;
         overflow: hidden;
-        transition: 1s;
+        transition: .5s;
+    }
+
+    &:not(.expanded) .expanded-wrapper {
+        height: 0px!important;
     }
 
     &.expanded {
-        > .expanded-wrapper {
-            height: auto;
-            overflow: auto;
-        }
-
         > .header .icon {
             transform: rotate(180deg); 
         }
@@ -61,6 +59,10 @@ $hoverColor: navy;
             font-weight: 600;
             font-size: 18px;
 
+            h2 {
+                font-size: 18px;
+            }
+
             > .icon {
                 border-top-width: 8px;
                 border-left-width: 8px;
@@ -70,6 +72,9 @@ $hoverColor: navy;
 
         > .expanded-wrapper > .content {
             border-bottom: 1px solid lightgray;
+            -webkit-box-shadow: inset -1px 47px 5px -46px rgba(0,0,0,0.75);
+            -moz-box-shadow: inset -1px 47px 5px -46px rgba(0,0,0,0.75);
+            box-shadow: inset -1px 47px 5px -46px rgba(0,0,0,0.75);
         }
     }
 }

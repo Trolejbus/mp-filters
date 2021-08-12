@@ -1,10 +1,10 @@
 <div class="filter-group" [ngClass]="'level' + level" [class.expanded]="expanded">
     <div class="header" (click)="toggleExpanded()">
-        <h2>{{ filter.title }}</h2>
+        <h2>{{ filter.title }} {{ contentHeight$ | async }}</h2>
         <div class="icon"></div>
     </div>
-    <div class="expanded-wrapper">
-        <div class="content">
+    <div class="expanded-wrapper" [style.height]="(contentHeight$ | async) + 'px'">
+        <div class="content" #content>
             <mp-filter-groups [level]="level + 1" *ngFor="let child of (filter.children ?? [])" [filter]="child"></mp-filter-groups>
         </div>
     </div>
