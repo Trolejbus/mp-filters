@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FilterItemType } from 'projects/mp-filters-lib/src/lib/enums';
 import { FilterGroupModel } from 'projects/mp-filters-lib/src/lib/models';
 
 @Component({
@@ -28,6 +29,34 @@ export class Example1Component implements OnInit {
           title: "Name12",
         },
       ],
+      items: [
+        {
+          title: 'item11',
+          name: 'item11',
+          type: FilterItemType.Multiselect,
+          objects: [
+            {
+              label: 'object111',
+            },
+            {
+              label: 'object112',
+            },
+          ]
+        },
+        {
+          title: 'item12',
+          name: 'item12',
+          type: FilterItemType.Multiselect,
+          objects: [
+            {
+              label: 'object121',
+            },
+            {
+              label: 'object122',
+            },
+          ]
+        },
+      ]
     },
     {
       name: "name2",

@@ -1,0 +1,7 @@
+<h3>{{filterItem?.title}}</h3>
+<label class="checkbox-container" *ngFor="let object of (filterItem?.objects ?? [])" >
+    <input type="checkbox"/>
+    {{ object.label }}
+</label>
+
+
