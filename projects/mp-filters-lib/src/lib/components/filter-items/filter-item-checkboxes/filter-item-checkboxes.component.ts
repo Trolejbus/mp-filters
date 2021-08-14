@@ -3,12 +3,12 @@ import { MpFiltersController } from '../../../controllers';
 import { FilterItemModel, FilterItemObjectModel } from '../../../models';
 
 @Component({
-  selector: 'mp-filter-item-multiselect',
-  templateUrl: './filter-item-multiselect.component.html',
-  styleUrls: ['./filter-item-multiselect.component.scss', '../filter-item.scss'],
+  selector: 'mp-filter-item-checkboxes',
+  templateUrl: './filter-item-checkboxes.component.html',
+  styleUrls: ['./filter-item-checkboxes.component.scss', '../filter-item.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FilterItemMultiselectComponent implements OnInit {
+export class FilterItemCheckboxesComponent implements OnInit {
 
   @Input()
   public filterItem!: FilterItemModel;
@@ -27,10 +27,6 @@ export class FilterItemMultiselectComponent implements OnInit {
       object: o,
       value: false,
     }));
-  }
-
-  public filterChange(object: FilterItemObjectModel, event: Event): void {
-    console.log(object, event);
   }
 
   public change(objectVm: FilterItemObjectVm, value: boolean): void {

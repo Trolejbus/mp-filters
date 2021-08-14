@@ -37,7 +37,7 @@ export class Example1Component implements OnInit {
         {
           title: 'item11',
           name: 'item11',
-          type: FilterItemType.Multiselect,
+          type: FilterItemType.Checkboxes,
           objects: [
             {
               id: 'object111',
@@ -52,7 +52,7 @@ export class Example1Component implements OnInit {
         {
           title: 'item12',
           name: 'item12',
-          type: FilterItemType.Multiselect,
+          type: FilterItemType.Checkboxes,
           objects: [
             {
               id: 'object121',
@@ -61,6 +61,36 @@ export class Example1Component implements OnInit {
             {
               id: 'object122',
               label: 'object122',
+            },
+          ]
+        },
+        {
+          title: 'item13',
+          name: 'item13',
+          type: FilterItemType.Radiobuttons,
+          objects: [
+            {
+              id: 'object131',
+              label: 'object131',
+            },
+            {
+              id: 'object132',
+              label: 'object132',
+            },
+          ]
+        },
+        {
+          title: 'item14',
+          name: 'item14',
+          type: FilterItemType.Dropdown,
+          objects: [
+            {
+              id: 'object141',
+              label: 'object141',
+            },
+            {
+              id: 'object142',
+              label: 'object142',
             },
           ]
         },

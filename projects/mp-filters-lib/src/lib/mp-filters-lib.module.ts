@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { MpFiltersComponent } from './mp-filters.component';
 import { CommonModule } from '@angular/common';
-import { FilterGroupsComponent } from './components/filter-groups/filter-groups.component';
-import { FiltersContainerComponent } from './components';
-import { FilterItemComponent } from './components/filter-item/filter-item.component';
-import { FilterItemMultiselectComponent } from './components/filter-items/filter-item-multiselect/filter-item-multiselect.component';
+import { FilterGroupsComponent, FilterItemCheckboxesComponent, FilterItemComponent, FiltersContainerComponent } from './components';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FilterItemRadiobuttonsComponent } from './components/filter-items/filter-item-radiobuttons/filter-item-radiobuttons.component';
+import { FilterItemDropdownComponent } from './components/filter-items/filter-item-dropdown/filter-item-dropdown.component';
 
 
 @NgModule({
@@ -14,7 +13,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FiltersContainerComponent,
     FilterGroupsComponent,
     FilterItemComponent,
-    FilterItemMultiselectComponent,
+    FilterItemCheckboxesComponent,
+    FilterItemRadiobuttonsComponent,
+    FilterItemDropdownComponent,
   ],
   imports: [
     CommonModule,

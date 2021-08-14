@@ -1,4 +1,4 @@
-<h3>{{filterItem?.title}}</h3>
+<h3>{{filterItem.title}}</h3>
 <label class="checkbox-container" *ngFor="let objectVm of objects" >
     <input type="checkbox" [ngModel]="objectVm.value" (ngModelChange)="change(objectVm, $event)" />
     {{ objectVm.object.label }}

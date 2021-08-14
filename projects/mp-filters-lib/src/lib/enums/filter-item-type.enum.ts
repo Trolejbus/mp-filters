@@ -1,3 +1,5 @@
 export enum FilterItemType {
-    Multiselect = 'Multiselect',
+  Checkboxes = 'Checkboxes',
+  Radiobuttons = 'Radiobuttons',
+  Dropdown = 'Dropdown',
 }

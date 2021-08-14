@@ -1,0 +1,5 @@
+<h3>{{filterItem.title}}</h3>
+<label class="radiobutton-container" *ngFor="let object of filterItem.objects" >
+    <input type="radio" [value]="object.id" [ngModel]="value" (ngModelChange)="change($event)" />
+    {{ object.label }}
+</label>
