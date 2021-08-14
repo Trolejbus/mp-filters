@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
-import { MpFiltersLibComponent } from './mp-filters-lib.component';
+import { MpFiltersComponent } from './mp-filters.component';
 import { CommonModule } from '@angular/common';
 import { FilterGroupsComponent } from './components/filter-groups/filter-groups.component';
 import { FiltersContainerComponent } from './components';
 import { FilterItemComponent } from './components/filter-item/filter-item.component';
 import { FilterItemMultiselectComponent } from './components/filter-items/filter-item-multiselect/filter-item-multiselect.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
-    MpFiltersLibComponent,
+    MpFiltersComponent,
     FiltersContainerComponent,
     FilterGroupsComponent,
     FilterItemComponent,
@@ -17,10 +18,11 @@ import { FilterItemMultiselectComponent } from './components/filter-items/filter
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   exports: [
-    MpFiltersLibComponent,
-    FiltersContainerComponent,
+    MpFiltersComponent,
   ]
 })
 export class MpFiltersLibModule { }

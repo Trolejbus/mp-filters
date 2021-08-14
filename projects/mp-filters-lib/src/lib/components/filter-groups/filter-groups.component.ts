@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, Input, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, Input, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { BehaviorSubject, interval, Subject, Subscription } from 'rxjs';
 import { FilterGroupModel } from '../../models';
 import { map, tap } from 'rxjs/operators'
@@ -7,6 +7,7 @@ import { map, tap } from 'rxjs/operators'
   selector: 'mp-filter-groups',
   templateUrl: './filter-groups.component.html',
   styleUrls: ['./filter-groups.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FilterGroupsComponent implements OnInit, OnDestroy {
 

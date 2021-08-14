@@ -1,1 +1,6 @@
-<mp-filters-container [filters]="filters"></mp-filters-container>
+<div class="example-container">
+    <mp-filters [filters]="filters"></mp-filters>
+    <div>
+        {{ appliedFilters$ | async | json }}
+    </div>
+</div>

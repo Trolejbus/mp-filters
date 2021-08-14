@@ -1,7 +1,7 @@
 <h3>{{filterItem?.title}}</h3>
-<label class="checkbox-container" *ngFor="let object of (filterItem?.objects ?? [])" >
-    <input type="checkbox"/>
-    {{ object.label }}
+<label class="checkbox-container" *ngFor="let objectVm of objects" >
+    <input type="checkbox" [ngModel]="objectVm.value" (ngModelChange)="change(objectVm, $event)" />
+    {{ objectVm.object.label }}
 </label>
 
 

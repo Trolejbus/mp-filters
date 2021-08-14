@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MpFiltersLibComponent } from './mp-filters-lib.component';
+import { MpFiltersComponent } from './mp-filters.component';
 
 describe('MpFiltersLibComponent', () => {
-  let component: MpFiltersLibComponent;
-  let fixture: ComponentFixture<MpFiltersLibComponent>;
+  let component: MpFiltersComponent;
+  let fixture: ComponentFixture<MpFiltersComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MpFiltersLibComponent ]
+      declarations: [ MpFiltersComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MpFiltersLibComponent);
+    fixture = TestBed.createComponent(MpFiltersComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

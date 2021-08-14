@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { MpFiltersFacade } from 'projects/mp-filters-lib/src/lib/controllers';
 import { FilterItemType } from 'projects/mp-filters-lib/src/lib/enums';
-import { FilterGroupModel } from 'projects/mp-filters-lib/src/lib/models';
+import { AppliedFilterModel, FilterGroupModel } from 'projects/mp-filters-lib/src/lib/models';
 
 @Component({
   selector: 'app-example1',
   templateUrl: './example1.component.html',
-  styleUrls: ['./example1.component.scss']
+  styleUrls: ['./example1.component.scss'],
+  providers: [
+    MpFiltersFacade,
+  ]
 })
 export class Example1Component implements OnInit {
 
@@ -36,9 +40,11 @@ export class Example1Component implements OnInit {
           type: FilterItemType.Multiselect,
           objects: [
             {
+              id: 'object111',
               label: 'object111',
             },
             {
+              id: 'object112',
               label: 'object112',
             },
           ]
@@ -49,9 +55,11 @@ export class Example1Component implements OnInit {
           type: FilterItemType.Multiselect,
           objects: [
             {
+              id: 'object121',
               label: 'object121',
             },
             {
+              id: 'object122',
               label: 'object122',
             },
           ]
@@ -75,8 +83,9 @@ export class Example1Component implements OnInit {
       title: "Name5",
     },
   ];
+  public appliedFilters$ = this.facade.filtersChanged$;
   
-  constructor() { }
+  constructor(private facade: MpFiltersFacade) { }
 
   ngOnInit(): void {
   }

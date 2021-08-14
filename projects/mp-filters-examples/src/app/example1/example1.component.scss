@@ -1,4 +1,9 @@
-mp-filters-container {
-    width: 200px;
-    display: block;
+.example-container {
+    display: flex;
+    gap: 20px;
+    
+    mp-filters {
+        width: 200px;
+        display: block;
+    }
 }
