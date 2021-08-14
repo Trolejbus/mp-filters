@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { MpFiltersController } from '../../../controllers';
-import { FilterItemModel, FilterItemObjectModel } from '../../../models';
+import { FilterItemModel } from '../../../models';
 
 @Component({
   selector: 'mp-filter-item-radiobuttons',
@@ -22,7 +22,8 @@ export class FilterItemRadiobuttonsComponent implements OnInit {
     }
   }
 
-  public change(value: string): void {  
+  public change(value: string): void {
+    this.value = value;
     if (value != null) {
       this.filtersController.updateFilter({
         name: this.filterItem.name,

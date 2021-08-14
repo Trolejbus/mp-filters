@@ -1,13 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MpFiltersController } from '../../../controllers';
-import { FilterItemModel, FilterItemObjectModel } from '../../../models';
+import { FilterItemModel } from '../../../models';
 
 @Component({
-  selector: 'mp-filter-item-dropdown',
-  templateUrl: './filter-item-dropdown.component.html',
-  styleUrls: ['./filter-item-dropdown.component.scss', '../filter-item.scss'],
+  selector: 'mp-filter-item-inputtext',
+  templateUrl: './filter-item-inputtext.component.html',
+  styleUrls: ['./filter-item-inputtext.component.scss', '../filter-item.scss'],
 })
-export class FilterItemDropdownComponent implements OnInit {
+export class FilterItemInputtextComponent implements OnInit {
 
   @Input()
   public filterItem!: FilterItemModel;
@@ -23,7 +23,7 @@ export class FilterItemDropdownComponent implements OnInit {
 
   public change(value: string): void {
     this.value = value;
-    if (value != null) {
+    if (value != null && value !== "") {
       this.filtersController.updateFilter({
         name: this.filterItem.name,
         value,

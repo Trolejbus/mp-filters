@@ -94,6 +94,11 @@ export class Example1Component implements OnInit {
             },
           ]
         },
+        {
+          title: 'item15',
+          name: 'item15',
+          type: FilterItemType.InputText,
+        },
       ]
     },
     {

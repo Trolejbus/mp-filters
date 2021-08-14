@@ -5,6 +5,7 @@ import { FilterGroupsComponent, FilterItemCheckboxesComponent, FilterItemCompone
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FilterItemRadiobuttonsComponent } from './components/filter-items/filter-item-radiobuttons/filter-item-radiobuttons.component';
 import { FilterItemDropdownComponent } from './components/filter-items/filter-item-dropdown/filter-item-dropdown.component';
+import { FilterItemInputtextComponent } from './components/filter-items/filter-item-inputtext/filter-item-inputtext.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { FilterItemDropdownComponent } from './components/filter-items/filter-it
     FilterItemCheckboxesComponent,
     FilterItemRadiobuttonsComponent,
     FilterItemDropdownComponent,
+    FilterItemInputtextComponent,
   ],
   imports: [
     CommonModule,

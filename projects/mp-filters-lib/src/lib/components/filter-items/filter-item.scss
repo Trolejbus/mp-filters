@@ -4,3 +4,10 @@ h3 {
     font-size: 14px;
     font-weight: 100;
 }
+
+.filter-item-container {
+    width: calc(100% - 5px);
+    display: block;
+    padding-right: 5px;
+    margin-bottom: 10px;
+}
