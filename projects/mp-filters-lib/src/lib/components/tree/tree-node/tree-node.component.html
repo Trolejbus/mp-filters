@@ -1,0 +1,15 @@
+<div class="tree-node">
+    <label class="checkbox-label">
+        <input
+            #checkbox
+            type="checkbox"
+            [ngModel]="value | async" 
+            (ngModelChange)="valueChanged($event)" />
+        {{ nodeController.label }} {{ nodeController.isLeaf ? '(l)' : '(n)' }}
+    </label>
+    
+    <mp-tree-node
+        *ngFor="let childNodeController of nodeController.children"
+        [nodeController]="childNodeController">
+    </mp-tree-node>
+</div>

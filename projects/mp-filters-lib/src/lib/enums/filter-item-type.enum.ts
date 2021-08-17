@@ -3,4 +3,5 @@ export enum FilterItemType {
   Radiobuttons = 'Radiobuttons',
   Dropdown = 'Dropdown',
   InputText = 'InputText',
+  Tree = 'Tree',
 }

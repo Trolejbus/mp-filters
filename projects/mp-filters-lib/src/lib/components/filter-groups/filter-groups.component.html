@@ -5,7 +5,7 @@
     </div>
     <div class="expanded-wrapper" [style.height]="(contentHeight$ | async) + 'px'">
         <div class="content" #content>
-            <mp-filter-groups [level]="level + 1" *ngFor="let child of (filter.children ?? [])" [filter]="child"></mp-filter-groups>
+            <mp-filter-groups class="filter-group" [level]="level + 1" *ngFor="let child of (filter.children ?? [])" [filter]="child"></mp-filter-groups>
             <mp-filter-item *ngFor="let filterItem of (filter.items ?? [])" [filterItem]="filterItem"></mp-filter-item>
         </div>
     </div>

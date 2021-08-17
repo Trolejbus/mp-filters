@@ -99,6 +99,31 @@ export class Example1Component implements OnInit {
           name: 'item15',
           type: FilterItemType.InputText,
         },
+        {
+          title: 'item16',
+          name: 'item16',
+          type: FilterItemType.Tree,
+          objects: [
+            {
+              id: 'object141',
+              label: 'object141',
+              objects: [
+                {
+                  id: 'object1411',
+                  label: 'object1411',
+                },
+                {
+                  id: 'object1412',
+                  label: 'object1412',
+                },
+              ]
+            },
+            {
+              id: 'object142',
+              label: 'object142',
+            },
+          ]
+        },
       ]
     },
     {

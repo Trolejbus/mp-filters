@@ -1,6 +1,9 @@
 $hoverColor: navy;
 
 .filter-group {
+    margin-bottom: 10px;
+    display: block;
+    
     .header {
         display: flex;
         align-items: center;
@@ -50,6 +53,7 @@ $hoverColor: navy;
     }
 
     &.level0 {
+        margin-bottom: 0px;
         padding-left: 0;
     
         > .header {
