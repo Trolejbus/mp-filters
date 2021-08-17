@@ -11,7 +11,7 @@ export class FilterItemTreeComponent implements OnInit {
 
   @Input()
   public filterItem!: FilterItemModel;
-  public value: any;
+  public value!: string[];
 
   constructor(private filtersController: MpFiltersController) { }
 
@@ -21,9 +21,9 @@ export class FilterItemTreeComponent implements OnInit {
     }
   }
 
-  public change(value: string): void {
+  public change(value: string[]): void {
     this.value = value;
-    if (value != null) {
+    if (value?.length > 0) {
       this.filtersController.updateFilter({
         name: this.filterItem.name,
         value,

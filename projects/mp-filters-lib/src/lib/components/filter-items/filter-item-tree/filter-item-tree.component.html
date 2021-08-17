@@ -1,1 +1,1 @@
-<mp-tree [filterObjects]="filterItem.objects ?? []"></mp-tree>
+<mp-tree [filterObjects]="filterItem.objects ?? []" [ngModel]="value" (ngModelChange)="change($event)"></mp-tree>
