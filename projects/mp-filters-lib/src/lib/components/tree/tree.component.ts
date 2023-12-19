@@ -22,16 +22,16 @@ export class TreeComponent implements OnInit, OnChanges, OnDestroy, ControlValue
   @Input()
   public filterObjects: FilterItemObjectModel[] = [];
   public nodeControllers!: TreeNodeController[];
-  private changeFn?: (id: string[]) => void;
+  private changeFn?: (id: any[]) => void;
   private touchFn?: () => void;
   private controllerSubscription = new Subscription();
 
   constructor() { }
 
-  writeValue(obj: string[]): void {
+  writeValue(obj: any[]): void {
   }
 
-  registerOnChange(fn: (id: string[]) => void): void {
+  registerOnChange(fn: (id: any[]) => void): void {
     this.changeFn = fn;
   }
 

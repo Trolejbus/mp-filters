@@ -1,5 +1,5 @@
 export class FilterItemObjectModel {
     public label!: string;
-    public id!: string;
+    public id!: any;
     public objects?: FilterItemObjectModel[];
 }

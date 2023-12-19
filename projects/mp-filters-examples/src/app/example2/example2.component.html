@@ -1,0 +1,18 @@
+<div class="example-container">
+    <mp-filters [filters]="filters"></mp-filters>
+    <div class="table-container">
+        <app-loader></app-loader>
+        <table style="width:100%">
+            <tr>
+              <th>Name</th>
+              <th>Profession</th>
+              <th>Gender</th>
+            </tr>
+            <tr *ngFor="let hero of data">
+              <td>{{ hero.name }}</td>
+              <td>{{ hero.profession | profession }}</td>
+              <td>{{ hero.gender | gender }}</td>
+            </tr>
+        </table>
+    </div>
+</div>

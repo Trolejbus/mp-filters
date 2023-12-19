@@ -10,7 +10,7 @@ export class TreeNodeController {
     );
     private subscription = new Subscription();
 
-    constructor(public label: string, public id: string, public children: TreeNodeController[]) {
+    constructor(public label: string, public id: any, public children: TreeNodeController[]) {
         this.subscription.add(this.childChanged$.subscribe(c => this.state$.next(c)));
     }
 
@@ -32,7 +32,7 @@ export class TreeNodeController {
         return this.children.length === 0;
     }
 
-    public getSelectedIds(onlyLeafs: boolean): string[] {
+    public getSelectedIds(onlyLeafs: boolean): any[] {
         const result = this.children.map(c => c.getSelectedIds(onlyLeafs)).reduce((a, b) => a.concat(b), []);
         if ((!onlyLeafs || this.isLeaf) && this.isSelectedOrPartiallySelected()) {
             result.push(this.id);
@@ -41,7 +41,7 @@ export class TreeNodeController {
         return result;
     }
 
-    public selectIds(ids: string[]): void {
+    public selectIds(ids: any[]): void {
         if (ids.includes(this.id)) {
             this.select(true);
         }
